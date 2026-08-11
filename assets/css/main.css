@@ -3233,6 +3233,8 @@ input, select, textarea {
 .case-study-item:last-of-type { margin-bottom: 0; }
 /* .recent-work-item img { height: 220px; object-fit: cover; } */
 
+form ul.actions { padding-top: 1.25rem; }
+
 #footer .icon::before { width: 100%; text-align: center; }
 #footer .icon > .label { display: block; }
 
@@ -3244,7 +3246,11 @@ input, select, textarea {
 }
 
 @media screen and (min-width: 981px) {
-	#header h1 { max-width: 393px; margin-left: auto; }
+	#header h1 { max-width: 390px; margin-left: auto; }
+}
+
+@media screen and (max-width: 1280px) {
+	form ul.actions { padding-top: 0.75rem; }
 }
 
 @media screen and (max-width: 736px) {
