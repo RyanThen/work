@@ -93,6 +93,42 @@
 
 			}
 
+	// Form submission confirmation message
+	const form = document.getElementById("contact-form");
+	const result = document.getElementById("form-result");
+
+	form.addEventListener("submit", async function (e) {
+			e.preventDefault();
+
+			result.style.color = "#ffffff";
+			result.textContent = "Sending...";
+
+			const formData = new FormData(form);
+
+			const response = await fetch("https://api.web3forms.com/submit", {
+					method: "POST",
+					body: formData,
+					headers: {
+							Accept: "application/json"
+					}
+			});
+
+			const data = await response.json();
+
+			if (response.ok) {
+					result.style.color = "#4CAF50";
+					result.textContent =
+							"Thank you! Your message has been sent successfully. I'll get back to you as soon as possible.";
+
+					form.reset();
+			} else {
+					result.style.color = "#ff4d4d";
+					result.textContent =
+							"Something went wrong. Please try again later.";
+			}
+	});
+
+
 	// Main Sections: Two.
 
 		/////////////////////////////////////////////////////////////////////////
