@@ -97,18 +97,20 @@
 					<p>Interested in discussing an idea or want to hire me?</p>
 					<div class="row">
 						<div class="col-8 col-12-small">
-							<form action="https://api.web3forms.com/submit" method="POST">
+							<form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
 								<input type="hidden" name="access_key" value="86158527-8c9c-41db-b9be-66ed0a93a4c2">
 								<input type="hidden" name="subject" value="New Portfolio Inquiry">
 								<input type="hidden" name="from_name" value="Ryan Then Portfolio">
-								<!-- Honeypot spam protection -->
 								<input type="checkbox" name="botcheck" style="display:none;">
 								<div class="row gtr-uniform gtr-50">
-									<div class="col-6 col-12-xsmall">
+									<div class="col-12">
 										<input type="text" name="full_name" id="name" placeholder="Full Name" required>
 									</div>
 									<div class="col-6 col-12-xsmall">
 										<input type="email" name="email" id="email" placeholder="Email" required>
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<input type="phone" name="phone" id="phone" placeholder="Phone" required>
 									</div>
 									<div class="col-12">
 										<textarea name="message" id="message" placeholder="Message" rows="4" required></textarea>
@@ -117,6 +119,7 @@
 								<ul class="actions">
 									<li><input type="submit" value="Send Message"></li>
 								</ul>
+								<p id="form-result"></p>
 							</form>
 						</div>
 						<div class="col-4 col-12-small">
