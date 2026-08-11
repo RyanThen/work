@@ -97,16 +97,27 @@
 					<p>Interested in discussing an idea or want to hire me?</p>
 					<div class="row">
 						<div class="col-8 col-12-small">
-							<form method="post" action="#">
+							<form action="https://api.web3forms.com/submit" method="POST">
+								<input type="hidden" name="access_key" value="86158527-8c9c-41db-b9be-66ed0a93a4c2">
+								<input type="hidden" name="subject" value="New Portfolio Inquiry">
+								<input type="hidden" name="from_name" value="Ryan Then Portfolio">
+								<!-- Honeypot spam protection -->
+								<input type="checkbox" name="botcheck" style="display:none;">
 								<div class="row gtr-uniform gtr-50">
-									<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-									<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									<div class="col-6 col-12-xsmall">
+										<input type="text" name="full_name" id="name" placeholder="Full Name" required>
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<input type="email" name="email" id="email" placeholder="Email" required>
+									</div>
+									<div class="col-12">
+										<textarea name="message" id="message" placeholder="Message" rows="4" required></textarea>
+									</div>
 								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message"></li>
+								</ul>
 							</form>
-							<ul class="actions">
-								<li><input type="submit" value="Send Message" /></li>
-							</ul>
 						</div>
 						<div class="col-4 col-12-small">
 							<ul class="labeled-icons">
